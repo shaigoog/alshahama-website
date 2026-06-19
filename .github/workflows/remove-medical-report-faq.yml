@@ -1,0 +1,59 @@
+name: Remove medical report FAQ
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .remove-medical-report-faq
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Remove medical report FAQ item
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          index_path = Path('index.html')
+          index = index_path.read_text(encoding='utf-8')
+          pattern = re.compile(
+              r'\n\s*<div class="faq-item">\s*\n'
+              r'\s*<h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="fa2" id="fq2">'
+              r'<span data-i18n="faq2q">هل يمكن إرسال التقرير الطبي عبر واتساب؟</span>'
+              r'<span class="faq-ico" aria-hidden="true"></span></button></h3>\s*\n'
+              r'\s*<div class="faq-a" id="fa2" role="region" aria-labelledby="fq2" hidden>'
+              r'<p data-i18n="faq2a">نعم، يمكن إرسال التقرير والمعلومات المتاحة عبر واتساب لمراجعة الاحتياج المبدئي.</p>'
+              r'</div>\s*\n\s*</div>',
+              re.MULTILINE,
+          )
+          updated, count = pattern.subn('', index, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected to remove 1 FAQ item, removed {count}')
+          index_path.write_text(updated, encoding='utf-8')
+
+          script_path = Path('script.js')
+          script = script_path.read_text(encoding='utf-8')
+          script = script.replace('      faq2q: "هل يمكن إرسال التقرير الطبي عبر واتساب؟",\n      faq2a: "نعم، يمكن إرسال التقرير والمعلومات المتاحة عبر واتساب لمراجعة الاحتياج المبدئي.",\n', '')
+          script = script.replace('      faq2q: "Can I send the medical report through WhatsApp?",\n      faq2a: "Yes. Medical reports and available information may be shared through WhatsApp for an initial review.",\n', '')
+          script_path.write_text(script, encoding='utf-8')
+          PY
+
+      - name: Commit update
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f .remove-medical-report-faq
+          git add index.html script.js .remove-medical-report-faq
+          git commit -m "Remove medical report WhatsApp FAQ"
+          git push
