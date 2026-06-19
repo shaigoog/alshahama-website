@@ -108,3 +108,7 @@ After merging, the site serves at `https://alshahamamedical.com/`
 
 Alshahama Medical Equipments Trading LLC · Office 101, First Floor, Al Abeer
 Building, Bur Dubai, Dubai, UAE · +971 50 323 8103 · info@alshahamamedical.com
+
+
+## Medical campaign posters
+Ten bilingual promotional posters are included in `assets/posters/` and displayed in the website poster showcase.
