@@ -2,201 +2,131 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#082f4e">
-  <meta name="description" content="الشهامة لتجارة المعدات الطبية في دبي — معدات طبية، كراسي متحركة، أطراف صناعية وأجهزة تعويضية مع خدمات التقييم والتوصيل والتدريب.">
-  <title>الشهامة للمعدات الطبية | Alshahama Medical Equipment</title>
-  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a3657">
+  <meta name="description" content="الشهامة لتجارة المعدات الطبية في دبي — حلول الحركة، الكراسي المتحركة، الأطراف الصناعية والأجهزة التعويضية.">
+  <title>الشهامة للمعدات الطبية | ALSHAHAMA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
-  <a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
-
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="الشهامة للمعدات الطبية">
-        <img src="assets/alshahama-logo.svg" alt="شعار الشهامة للمعدات الطبية">
+  <header class="header">
+    <div class="shell header-inner">
+      <a href="#top" class="brand" aria-label="الشهامة للمعدات الطبية">
+        <img src="assets/alshahama-logo.svg?v=4" alt="شعار الشهامة لتجارة المعدات الطبية">
       </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="فتح القائمة">
+      <button class="menu-btn" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-panel">
         <span></span><span></span><span></span>
       </button>
-
-      <nav class="main-nav" id="main-nav" aria-label="القائمة الرئيسية">
-        <a href="#services">خدماتنا</a>
-        <a href="#why-us">لماذا الشهامة</a>
-        <a href="#process">طريقة العمل</a>
-        <a href="#contact">تواصل معنا</a>
-      </nav>
     </div>
+    <div class="nav-backdrop" hidden></div>
+    <nav id="nav-panel" class="nav-panel" aria-label="القائمة الرئيسية">
+      <a href="#services">خدماتنا</a>
+      <a href="#why">لماذا الشهامة</a>
+      <a href="#steps">طريقة العمل</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
   </header>
 
-  <main id="main">
+  <main id="top">
     <section class="hero">
-      <div class="hero-orb hero-orb-one"></div>
-      <div class="hero-orb hero-orb-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="location-pill" aria-label="الموقع">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Zm0-9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z"/></svg>
-            دبي – الإمارات العربية المتحدة
-          </div>
-          <p class="eyebrow">حلول طبية مصممة حسب احتياج كل حالة</p>
+      <div class="hero-noise"></div>
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <div class="location"><svg viewBox="0 0 24 24"><path d="M12 22s8-6 8-13a8 8 0 1 0-16 0c0 7 8 13 8 13Zm0-9.3A3.2 3.2 0 1 1 12 6a3.2 3.2 0 0 1 0 6.7Z"/></svg>دبي – الإمارات العربية المتحدة</div>
+          <p class="kicker">حلول طبية مدروسة لكل حالة</p>
           <h1>الشهامة لتجارة<br>المعدات الطبية</h1>
-          <p class="hero-text">نوفر المعدات الطبية وحلول الحركة والأطراف الصناعية والأجهزة التعويضية، مع خدمات التقييم وأخذ المقاسات والتوصيل والتدريب على الاستخدام.</p>
-
+          <p class="lead">نوفر حلول الحركة والأطراف الصناعية والأجهزة التعويضية والمعدات الطبية، مع التقييم وأخذ المقاسات والتوصيل والتدريب على الاستخدام.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary whatsapp-link" href="#contact">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7c1.7.9 3.6 1.4 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4Zm-8.3 18.2h-.1c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 1 1 8.6 4.8Zm5.4-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.6.3-.5.9-1.7.1-.2.1-.5 0-.7l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg>
-              تواصل عبر واتساب
-            </a>
-            <a class="btn btn-secondary" href="#services">استكشف خدماتنا <span aria-hidden="true">←</span></a>
+            <a class="btn btn-primary whatsapp" href="#">تواصل عبر واتساب <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.1-1.8 1.2-.5.1-1.2.1-2-.2a12.8 12.8 0 0 1-2.7-1.3 10.6 10.6 0 0 1-3.7-3.3c-.8-1.1-1.6-2.5-1.6-4 0-1.4.7-2.1 1-2.4.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .7.6l.9 2.2c.1.3.1.5 0 .7l-.4.6c-.2.2-.3.4-.5.6-.2.2-.4.4-.2.8.2.4.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.6 1.6.4.2.6.2.9-.1l1.1-1.3c.3-.3.5-.3.9-.2l2 .9c.4.2.7.3.8.5.1.1.1.8-.1 1.6Z"/></svg></a>
+            <a class="btn btn-ghost" href="#services">استكشف خدماتنا <span>←</span></a>
           </div>
-
-          <div class="trust-row" aria-label="مميزات الخدمة">
-            <span><i>✓</i> خصوصية واحترام</span>
-            <span><i>✦</i> حلول مدروسة</span>
-            <span><i>✓</i> متابعة بعد التسليم</span>
+          <div class="proof">
+            <span><b>✓</b> خصوصية واحترام</span>
+            <span><b>✓</b> حلول حسب القياس</span>
+            <span><b>✓</b> متابعة بعد التسليم</span>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="مجالات خدمات الشهامة">
-          <div class="hero-card-glow"></div>
-          <div class="mobility-illustration" aria-hidden="true">
-            <svg viewBox="0 0 440 390">
-              <defs>
-                <linearGradient id="chairG" x1="70" y1="50" x2="350" y2="340" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#25C7B9"/>
-                  <stop offset="1" stop-color="#7B55E5"/>
-                </linearGradient>
-              </defs>
-              <circle cx="255" cy="250" r="104" fill="none" stroke="url(#chairG)" stroke-width="24" opacity=".95"/>
-              <circle cx="255" cy="250" r="26" fill="#fff" opacity=".96"/>
-              <path d="M126 76h92c24 0 43 19 43 43v82H145c-26 0-47-21-47-47v-50c0-16 12-28 28-28Z" fill="url(#chairG)"/>
-              <path d="M143 203h135l52 91" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="m173 202-29 94" fill="none" stroke="#21b9b1" stroke-width="22" stroke-linecap="round"/>
-              <circle cx="132" cy="315" r="43" fill="none" stroke="#21b9b1" stroke-width="18"/>
-              <path d="M260 105h63" stroke="#fff" stroke-width="18" stroke-linecap="round" opacity=".9"/>
-            </svg>
+        <div class="hero-visual" aria-label="حلول الحركة والتأهيل">
+          <div class="visual-card main-card">
+            <div class="visual-icon wheelchair">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="72" cy="78" r="30"/><circle cx="42" cy="20" r="12"/><path d="M41 38v29h34l17 31M40 52h30M45 67 32 94"/></svg>
+            </div>
+            <div><span>حلول الحركة</span><strong>كراسي وتجهيزات تأهيلية</strong></div>
           </div>
-          <div class="floating-tag tag-one">كراسي متحركة</div>
-          <div class="floating-tag tag-two">أطراف صناعية</div>
-          <div class="floating-tag tag-three">أجهزة تعويضية</div>
+          <div class="mini-grid">
+            <div class="visual-card mini"><span class="num">01</span><strong>أطراف صناعية</strong></div>
+            <div class="visual-card mini"><span class="num">02</span><strong>أجهزة تعويضية</strong></div>
+            <div class="visual-card mini"><span class="num">03</span><strong>معدات منزلية</strong></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow dark">خدمات متكاملة</p>
+    <section id="services" class="section light">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker dark">خدمات متكاملة</p>
           <h2>حلول تساعد على الحركة والاستقلالية</h2>
-          <p>نختار الحل المناسب وفق التقييم الطبي والاحتياج العملي لكل مستخدم، مع الاهتمام بالراحة والأمان وسهولة الاستخدام.</p>
+          <p>نبدأ بفهم الحالة وبيئة الاستخدام، ثم نختار الحل الأنسب للراحة والأمان وسهولة الاستخدام.</p>
         </div>
-
-        <div class="cards-grid">
-          <article class="service-card">
-            <div class="service-icon">♿</div>
-            <h3>الكراسي المتحركة</h3>
-            <p>كراسي يدوية وكهربائية وتأهيلية، مع خيارات الميل والإرجاع ودعم الرأس والجلوس المتخصص.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">🦿</div>
-            <h3>الأطراف الصناعية</h3>
-            <p>تقييم وأخذ مقاسات وتصنيع وتجربة وتدريب على الاستخدام والمتابعة بعد التسليم.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">🦾</div>
-            <h3>الأجهزة التعويضية</h3>
-            <p>جبائر وأجهزة تقويم وحلول تثبيت ودعم للمفاصل والحركة وفق احتياج الحالة.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">🏠</div>
-            <h3>خدمة منزلية</h3>
-            <p>زيارات للتقييم وأخذ المقاسات والتسليم والتدريب في منزل المريض عند الحاجة.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">🩺</div>
-            <h3>معدات طبية</h3>
-            <p>أجهزة ومستلزمات مختارة للاستخدام المنزلي والرعاية اليومية وفق معايير السلامة.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">🎯</div>
-            <h3>حلول مخصصة</h3>
-            <p>تعديلات وإكسسوارات وتجهيزات خاصة للحالات المعقدة واحتياجات الجلوس والتحكم.</p>
-          </article>
+        <div class="service-grid">
+          <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><circle cx="14" cy="16" r="5"/><circle cx="9" cy="4" r="2"/><path d="M9 7v6h6l3 6M9 10h5M10 13l-3 6"/></svg></div><h3>الكراسي المتحركة</h3><p>يدوية وكهربائية وتأهيلية، مع خيارات الميل والإرجاع ودعم الرأس والجلوس المتخصص.</p></article>
+          <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M10 2h4v8l3 4-3 8h-4l-3-8 3-4V2Z"/><path d="M8 8h8"/></svg></div><h3>الأطراف الصناعية</h3><p>تقييم وأخذ مقاسات وتجربة وتدريب على الاستخدام، مع المتابعة بعد التسليم.</p></article>
+          <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7zM7 9h10M10 3v6M14 9v12"/></svg></div><h3>الأجهزة التعويضية</h3><p>جبائر وأجهزة تقويم وحلول تثبيت ودعم للمفاصل والحركة وفق احتياج كل حالة.</p></article>
+          <article class="service-card"><div class="icon-box"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3V11Z"/><path d="M9 21v-7h6v7"/></svg></div><h3>الخدمة المنزلية</h3><p>زيارات للتقييم وأخذ القياسات والتسليم والتدريب داخل المنزل عند الحاجة.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section why-us" id="why-us">
-      <div class="container why-grid">
+    <section id="why" class="section dark-section">
+      <div class="shell split">
         <div>
-          <p class="eyebrow">الرعاية تبدأ بالفهم</p>
-          <h2>لماذا تختار الشهامة؟</h2>
-          <p class="section-copy">لا نبدأ بالمنتج؛ نبدأ بفهم الحالة، بيئة الاستخدام، قدرات المستخدم، واحتياجات الأسرة أو مقدم الرعاية.</p>
-          <div class="feature-list">
-            <div><strong>تقييم دقيق</strong><span>مراجعة الحالة والاحتياج قبل ترشيح الحل.</span></div>
-            <div><strong>قياسات وتجربة</strong><span>التأكد من الملاءمة والراحة والأمان.</span></div>
-            <div><strong>تدريب واضح</strong><span>شرح الاستخدام والعناية وإجراءات السلامة.</span></div>
-            <div><strong>متابعة مستمرة</strong><span>دعم بعد التسليم لضمان أفضل استفادة.</span></div>
-          </div>
+          <p class="kicker">الرعاية تبدأ بالفهم</p>
+          <h2>لماذا الشهامة؟</h2>
+          <p class="muted-light">لا نبدأ بالمنتج؛ نبدأ بالحالة، قدرات المستخدم، مكان الاستخدام، واحتياجات الأسرة أو مقدم الرعاية.</p>
         </div>
-        <aside class="quote-card">
-          <span class="quote-mark">“</span>
-          <p>هدفنا تقديم حل عملي وآمن يحافظ على كرامة المستخدم ويزيد استقلاليته اليومية.</p>
-          <strong>فريق الشهامة للمعدات الطبية</strong>
-        </aside>
+        <div class="benefits">
+          <div><span>01</span><strong>تقييم دقيق</strong><p>مراجعة الحالة والتقارير قبل ترشيح الحل.</p></div>
+          <div><span>02</span><strong>قياسات وتجربة</strong><p>التأكد من الملاءمة والراحة والأمان.</p></div>
+          <div><span>03</span><strong>تدريب واضح</strong><p>شرح الاستخدام والعناية وإجراءات السلامة.</p></div>
+          <div><span>04</span><strong>متابعة مستمرة</strong><p>دعم بعد التسليم لضمان أفضل استفادة.</p></div>
+        </div>
       </div>
     </section>
 
-    <section class="section process" id="process">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow dark">خطوات واضحة</p>
+    <section id="steps" class="section">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker dark">خطوات واضحة</p>
           <h2>من التواصل حتى المتابعة</h2>
         </div>
-        <div class="process-grid">
-          <div class="step"><span>01</span><h3>استلام الطلب</h3><p>مراجعة احتياج المريض والتقارير والصور المتاحة.</p></div>
-          <div class="step"><span>02</span><h3>التقييم والقياس</h3><p>زيارة أو موعد لتقييم الحالة وأخذ القياسات المطلوبة.</p></div>
-          <div class="step"><span>03</span><h3>اختيار الحل</h3><p>ترشيح الجهاز أو المنتج الأنسب مع توضيح المواصفات.</p></div>
-          <div class="step"><span>04</span><h3>التسليم والتدريب</h3><p>تجربة المنتج، ضبطه، وتدريب المستخدم أو الأسرة.</p></div>
+        <div class="steps">
+          <article><span>01</span><h3>استلام الطلب</h3><p>مراجعة احتياج المريض والتقارير والصور المتاحة.</p></article>
+          <article><span>02</span><h3>التقييم والقياس</h3><p>زيارة أو موعد لتقييم الحالة وأخذ المقاسات.</p></article>
+          <article><span>03</span><h3>اختيار الحل</h3><p>ترشيح الجهاز الأنسب وتوضيح المواصفات.</p></article>
+          <article><span>04</span><h3>التسليم والتدريب</h3><p>تجربة المنتج وضبطه وتدريب المستخدم أو الأسرة.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
-      <div class="container contact-card">
-        <div>
-          <p class="eyebrow">نحن قريبون منك</p>
-          <h2>تواصل معنا لمناقشة احتياج الحالة</h2>
-          <p>أرسل التقرير الطبي أو وصف الحالة، وسيقوم الفريق بمراجعة الطلب وتحديد الخطوة المناسبة.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn btn-light whatsapp-link" href="#">واتساب</a>
-          <a class="btn btn-outline-light" href="mailto:info@alshahama.ae">البريد الإلكتروني</a>
+    <section id="contact" class="contact-section">
+      <div class="shell contact-card">
+        <div><p class="kicker">نحن قريبون منك</p><h2>تواصل معنا لمناقشة احتياج الحالة</h2><p>أرسل التقرير الطبي أو وصف الحالة، وسيقوم الفريق بمراجعة الطلب وتحديد الخطوة المناسبة.</p></div>
+        <div class="contact-buttons">
+          <a class="btn btn-white whatsapp" href="#">واتساب</a>
+          <a class="btn btn-outline" href="tel:+971503238103">اتصال: +971 50 323 8103</a>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="floating-whatsapp whatsapp-link" href="#contact" aria-label="التواصل عبر واتساب">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7c1.7.9 3.6 1.4 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4Z"/></svg>
-  </a>
+  <a class="float-wa whatsapp" href="#" aria-label="تواصل عبر واتساب"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg></a>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/alshahama-logo.svg" alt="الشهامة">
-        <p>الشهامة لتجارة المعدات الطبية ش.ذ.م.م<br><span>دبي – الإمارات العربية المتحدة</span></p>
-      </div>
-      <p class="copyright">© <span id="year"></span> Alshahama Medical Equipment Trading LLC</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer><div class="shell footer-inner"><p>الشهامة لتجارة المعدات الطبية ش.ذ.م.م</p><span>دبي – الإمارات العربية المتحدة</span></div></footer>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
