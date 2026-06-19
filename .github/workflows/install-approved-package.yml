@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - alshahama-website-corrected.zip
+      - 'alshahama-website-corrected*.zip'
   workflow_dispatch:
 
 permissions:
@@ -17,8 +17,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Verify package exists
-        run: test -f alshahama-website-corrected.zip
+      - name: Select uploaded package
+        shell: bash
+        run: |
+          set -euo pipefail
+          PACKAGE="$(find . -maxdepth 1 -type f -name 'alshahama-website-corrected*.zip' -printf '%s %p\n' | sort -nr | head -n 1 | cut -d' ' -f2-)"
+          test -n "$PACKAGE"
+          echo "PACKAGE=$PACKAGE" >> "$GITHUB_ENV"
 
       - name: Extract approved website
         shell: bash
@@ -26,7 +31,7 @@ jobs:
           set -euo pipefail
           rm -rf .site-package
           mkdir .site-package
-          unzip -q alshahama-website-corrected.zip -d .site-package
+          unzip -q "$PACKAGE" -d .site-package
           SITE_DIR="$(find .site-package -type f -name index.html -printf '%h\n' | head -n 1)"
           test -n "$SITE_DIR"
 
@@ -34,6 +39,7 @@ jobs:
           rm -f index.html styles.css script.js README.md robots.txt sitemap.xml site.webmanifest .nojekyll
           cp -a "$SITE_DIR"/. .
           rm -rf .site-package
+          rm -f alshahama-website-corrected-trigger.zip
 
       - name: Commit exact approved package
         shell: bash
