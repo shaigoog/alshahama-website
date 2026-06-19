@@ -1,0 +1,50 @@
+name: Install approved website package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - alshahama-website-corrected.zip
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify package exists
+        run: test -f alshahama-website-corrected.zip
+
+      - name: Extract approved website
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .site-package
+          mkdir .site-package
+          unzip -q alshahama-website-corrected.zip -d .site-package
+          SITE_DIR="$(find .site-package -type f -name index.html -printf '%h\n' | head -n 1)"
+          test -n "$SITE_DIR"
+
+          rm -rf assets
+          rm -f index.html styles.css script.js README.md robots.txt sitemap.xml site.webmanifest .nojekyll
+          cp -a "$SITE_DIR"/. .
+          rm -rf .site-package
+
+      - name: Commit exact approved package
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No website changes to commit."
+            exit 0
+          fi
+          git commit -m "Install approved Alshahama website package"
+          git push
