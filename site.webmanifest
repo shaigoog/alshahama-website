@@ -1,11 +1,16 @@
 {
   "name": "ALSHAHAMA Medical Equipments Trading LLC",
   "short_name": "ALSHAHAMA",
-  "description": "Bilingual informational website for ALSHAHAMA Medical Equipments Trading LLC in Dubai.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#1B1A4E",
+  "description": "ALSHAHAMA Medical Equipments Trading LLC — medical equipment and mobility solutions in Dubai, UAE.",
   "lang": "ar",
-  "dir": "rtl"
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1B1A4E",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
 }

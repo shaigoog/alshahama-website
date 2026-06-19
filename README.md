@@ -21,7 +21,9 @@ No backend, no build step, no framework.
 ├─ sitemap.xml
 ├─ .nojekyll
 └─ assets/
-   └─ alshahama-logo.svg
+   ├─ logo/    alshahama-logo.png · og-image.jpg
+   ├─ icons/   favicon.ico · icon-16/32/180/192/512.png
+   └─ fonts/   Tajawal-{Regular,Medium,Bold,ExtraBold}.woff2  (self-hosted)
 ```
 
 ## Key features
@@ -31,7 +33,7 @@ No backend, no build step, no framework.
 - **Mobile-first**, no horizontal scroll from 320px upward; off-canvas drawer
   (closed on load, backdrop, Escape to close, scroll-lock).
 - **Single floating WhatsApp button** that carries the correct message per language.
-- **Tajawal font** loaded from Google Fonts, with system-font fallbacks.
+- **Self-hosted Tajawal font** (~84 KB total) — no external requests, no render-block.
 - **Accessibility:** one H1, landmarks, skip link, visible focus, `aria-expanded`
   FAQ accordion, reduced-motion support, AA-oriented contrast.
 - **SEO:** title, meta description, canonical, Open Graph + Twitter, theme color,

@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180" role="img" aria-label="Alshahama Medical Equipment">
-<defs><linearGradient id="g" x1="10" y1="5" x2="150" y2="170"><stop stop-color="#25bdb8"/><stop offset="1" stop-color="#7657e2"/></linearGradient></defs>
-<rect width="720" height="180" fill="white"/>
-<g transform="translate(15 8)" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M60 5C28 5 8 27 8 59v38c0 27 14 47 38 59l26 13"/><path d="M58 47h42c28 0 50 22 50 50v36"/><path d="M55 91h67"/><circle cx="150" cy="142" r="24"/></g>
-<g fill="#071245" font-family="Arial, Helvetica, sans-serif"><text x="205" y="82" font-size="68" font-weight="900" letter-spacing="2">ALSHAHAMA</text><text x="208" y="130" font-size="29">Medical Equipment Trading</text></g>
-</svg>
