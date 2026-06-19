@@ -20,15 +20,30 @@ if (menuButton && nav) {
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
-// Add the official WhatsApp number here in international format without +.
-// Example: const whatsappNumber = '971501234567';
-const whatsappNumber = '';
+const whatsappNumber = '971503238103';
+const formattedPhone = '+971 50 323 8103';
+const officialEmail = 'info@alshahamamedical.com';
 const defaultMessage = encodeURIComponent('السلام عليكم، أريد الاستفسار عن خدمات الشهامة للمعدات الطبية.');
 
 document.querySelectorAll('.whatsapp-link').forEach((link) => {
-  if (whatsappNumber) {
-    link.href = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  }
+  link.href = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', `التواصل مع الشهامة عبر واتساب على الرقم ${formattedPhone}`);
 });
+
+const emailLink = document.querySelector('a[href^="mailto:"]');
+if (emailLink) {
+  emailLink.href = `mailto:${officialEmail}`;
+  emailLink.setAttribute('aria-label', `إرسال بريد إلكتروني إلى ${officialEmail}`);
+}
+
+const contactActions = document.querySelector('.contact-actions');
+if (contactActions && !contactActions.querySelector('.phone-link')) {
+  const phoneLink = document.createElement('a');
+  phoneLink.className = 'btn btn-outline-light phone-link';
+  phoneLink.href = `tel:+${whatsappNumber}`;
+  phoneLink.textContent = `اتصال: ${formattedPhone}`;
+  phoneLink.setAttribute('aria-label', `الاتصال بالشهامة على الرقم ${formattedPhone}`);
+  contactActions.insertBefore(phoneLink, emailLink || null);
+}
