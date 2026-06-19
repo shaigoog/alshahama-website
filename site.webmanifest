@@ -1,0 +1,11 @@
+{
+  "name": "ALSHAHAMA Medical Equipments Trading LLC",
+  "short_name": "ALSHAHAMA",
+  "description": "Bilingual informational website for ALSHAHAMA Medical Equipments Trading LLC in Dubai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1B1A4E",
+  "lang": "ar",
+  "dir": "rtl"
+}

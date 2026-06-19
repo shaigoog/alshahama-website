@@ -1,16 +1,77 @@
-# Alshahama Medical Equipment Trading LLC
+# Alshahama Medical Equipment — Website / موقع الشهامة للمعدات الطبية
 
-Official bilingual Arabic/English website for **Alshahama Medical Equipment Trading LLC**.
+Static, bilingual (Arabic-default RTL / English LTR), mobile-first website for
+**ALSHAHAMA Medical Equipments Trading LLC** — Dubai, UAE.
+Built with semantic HTML5, modern CSS (logical properties), and vanilla JavaScript.
+No backend, no build step, no framework.
 
-- Arabic RTL and English language support
-- Responsive mobile-first design
-- Prosthetics, orthotics, wheelchairs, rehabilitation, home healthcare and medical equipment services
-- Direct WhatsApp, phone and email contact
+موقع ثابت ثنائي اللغة (العربية افتراضياً) مصمّم للجوال أولاً، بدون أي خادم أو إطار عمل.
+
+---
+
+## Structure
+
+```
+/
+├─ index.html
+├─ styles.css
+├─ script.js
+├─ site.webmanifest
+├─ robots.txt
+├─ sitemap.xml
+├─ .nojekyll
+└─ assets/
+   └─ alshahama-logo.svg
+```
+
+## Key features
+
+- **Bilingual** with a language switch (العربية | English); choice saved in `localStorage`.
+  All content is written into the page/script — no runtime machine translation.
+- **Mobile-first**, no horizontal scroll from 320px upward; off-canvas drawer
+  (closed on load, backdrop, Escape to close, scroll-lock).
+- **Single floating WhatsApp button** that carries the correct message per language.
+- **Tajawal font** loaded from Google Fonts, with system-font fallbacks.
+- **Accessibility:** one H1, landmarks, skip link, visible focus, `aria-expanded`
+  FAQ accordion, reduced-motion support, AA-oriented contrast.
+- **SEO:** title, meta description, canonical, Open Graph + Twitter, theme color,
+  favicon, manifest, robots.txt, sitemap.xml, and `MedicalBusiness` JSON-LD
+  (verified info only: name, phone, Dubai/UAE, URL, logo).
 
 ## Local preview
 
-Open `index.html` in a browser.
+Serve over HTTP (fonts won't load via `file://`):
 
-## GitHub Pages
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000/
+```
 
-Publish the repository from the `main` branch and root folder through **Settings → Pages**.
+## Deploy (GitHub Pages, branch `main`, folder `/root`)
+
+This package is meant to replace the repository root. Suggested flow:
+
+```bash
+git checkout -b claude/rebuild-alshahama-website
+# copy these files into the repo root (overwrite old ones), then:
+git add -A
+git commit -m "Rebuild website: bilingual, mobile-first, accessible, SEO"
+git push -u origin claude/rebuild-alshahama-website
+# open a Pull Request into main on GitHub
+```
+
+After merging into `main`, GitHub Pages serves from the root at:
+`https://alshahamamedical.com/`
+
+`.nojekyll` is included so all asset folders are served as-is.
+
+## Editing content
+
+- UI strings live in the `I18N` dictionary in `script.js` (`ar` and `en`).
+  The default Arabic copy is also inline in `index.html` for SEO and no-JS users.
+- Brand colors are CSS variables at the top of `styles.css`
+  (navy `#1B1A4E`, teal `#1F9E8C`/`#2FB6A3`, purple `#7B6FC9`).
+
+## Contact (as configured)
+
+ALSHAHAMA Medical Equipments Trading LLC · Office 101, First Floor, Al Abeer Building, Bur Dubai, Dubai, UAE · +971 50 323 8103 · info@alshahamamedical.com
