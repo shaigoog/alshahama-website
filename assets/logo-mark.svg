@@ -1,0 +1,18 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Alshahama logo mark</title>
+  <desc id="desc">A modern medical mobility mark in teal, blue and purple.</desc>
+  <defs>
+    <linearGradient id="g" x1="18" y1="10" x2="110" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23C7B8"/>
+      <stop offset="0.52" stop-color="#3488F4"/>
+      <stop offset="1" stop-color="#8B4DE8"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0A2746" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="10" y="10" width="108" height="108" rx="30" fill="url(#g)" filter="url(#s)"/>
+  <path d="M37 82.5L54.2 43.5C57.6 35.8 68.5 35.8 71.9 43.5L89 82.5" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M46.5 68.5H80" stroke="white" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="95" cy="94" r="9" fill="#C7FFF7" stroke="white" stroke-width="4"/>
+</svg>
